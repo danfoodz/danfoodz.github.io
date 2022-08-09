@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Dan_foodz</title>
+    <link rel="shortcut icon" type="image/png" href="https://danfoodz.github.io/images/dan_foodz.png">
+    <style>
+  .content {
+  position: relative;
+  text-align: center;
+  width: 800px;
+  top: 50px;
+  font-size: 20px;
+  margin: 0 auto;
+}
+    h1, h2, h3, h4, h5, h6, ul, ui, p {
+        color:white;
+        font-family:Verdana;
+        text-align: center;
+    }
+    a {
+        color:#236be8;
+        font-family:Verdana;
+        text-align: center;
+        text-decoration: none;
+    }
+</style>
+    </head>
+    <body style="background-color:#18181a;  background-image: url('https://danfoodz.github.io/images/back.png');">
+        <div class="content">
+            <br>
+            <h2>You are leaving <a href="https://danfoodz.github.io">danfoodz.rbx.ac</a></h2>
+            <h4 id="where">You are going to #, have fun!</h4>
+            <br>
+            <p id="Error"></p>
+        </div>
+        <script>
+            const params = new URLSearchParams(window.location.search);
+            if (params.has('to') && params.has('from') && params.has('toname') && params.has('fromname')) {
+                document.getElementById('where').innerHTML='You are going to '+params.get('toname')+', have fun!'
+                setTimeout(function(){ document.location=params.get('to'); }, 3000);
+                setTimeout(function(){ document.getElementById('Error').innerHTML='Hmm, it seems like something want wrong, well, sorry, going back to '+params.get('fromname')+'.'; setTimeout(function(){ document.location=params.get('from'); }, 2000);}, 5000);
+            } else {
+                document.location='https://danfoodz.github.io'
+            }
+        </script>
+    </body>
+</html>
