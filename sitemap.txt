@@ -12,6 +12,8 @@ https://danfoodz.github.io/discord/index.html
 https://danfoodz.github.io/discord/
 https://danfoodz.github.io/status/index.html
 https://danfoodz.github.io/status/
+https://danfoodz.github.io/archive/index.html
+https://danfoodz.github.io/archive/
 https://danfoodz.github.io/images/dan_foodz.png
 https://danfoodz.github.io/images/dan_foodz.ico
 https://danfoodz.github.io/images/back.png
