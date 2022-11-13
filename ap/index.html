@@ -5,12 +5,13 @@
     <body>
         Loading
         <script>
-            const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.has('i')) {
-                var ID = urlParams.get('i')
-                document.location = 'https://web.archive.org/https://www.roblox.com/users/'+ID+'/profile';
-            } else {
+            var ID = document.location.href.split('?')[1];
+            if (isNaN(ID)) {
+                document.write('\n\n   ##### Error, returning to the Archive page #####');
                 document.location = 'https://danfoodz.github.io/getarchived/';
+            } else {
+                document.write('\n\n ### Loading Archive, this may take some time. ###');
+                document.location = 'https://web.archive.org/https://www.roblox.com/users/'+ID+'/profile';
             }
         </script>
     </body>
