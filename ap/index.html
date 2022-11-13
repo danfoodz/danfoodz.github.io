@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Loading</title>
+    </head>
+    <body>
+        Loading
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('i')) {
+                var ID = urlParams.get('i')
+                document.location = 'https://web.archive.org/https://www.roblox.com/users/'+ID+'/profile';
+            } else {
+                document.location = 'https://danfoodz.github.io/getarchived/';
+            }
+        </script>
+    </body>
+</html>
