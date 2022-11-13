@@ -53,19 +53,13 @@
     <p>This is a tool made by <b>Dan_foodz</b> to archive any profile. This tool uses <b>Archive.org</b> to archive your profile!</p>
     <br>
     <!--<h3>Archive a Profile</h3>-->
-    <textarea placeholder="Roblox Username" id="robloxusername"></textarea>
+    <textarea placeholder="Roblox Username" id="robloxuserid"></textarea>
     <br>
     <button onclick="ArchiveProfile()">Archive</button>
     <script>
         function ArchiveProfile() {
-            var Username = document.getElementById('robloxusername').innerHTML
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-                var data = JSON.parse(xhttp.responseText);
-                window.open("https://web.archive.org/https://www.roblox.com/users/"+data['Id']+"/profile")
-            };
-            xhttp.open("GET", "https://api.roblox.com/users/get-by-username?username="+Username, true);
-            xhttp.send();
+            var Userid = document.getElementById('robloxuserid').value
+            window.open("https://web.archive.org/https://www.roblox.com/users/"+Userid+"/profile")
         }
     </script>
   </div>
