@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Get Archived - Dan_foodz</title>
+    <link rel="shortcut icon" type="image/png" href="https://danfoodz.github.io/images/dan_foodz.png">
+    <style>
+  .content {
+  position: relative;
+  text-align: center;
+  width: 800px;
+  top: 50px;
+  font-size: 20px;
+  margin: 0 auto;
+}
+  .iframe-container {
+		text-align:center;
+  		width:100%;
+  }
+    h1, h2, h3, h4, h5, h6, ul, ui, p, button, textarea {
+        color:white;
+        font-family:Verdana;
+        text-align: center;
+    }
+    ul {
+  display: table;
+  margin: 0 auto;
+}
+    a {
+        color:#236be8;
+        font-family:Verdana;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    button, textarea {
+        background-color: #070707;
+        outline-color: white;
+        resize: none;
+    }
+
+    button:hover {
+        background-color: #292727;
+    }
+</style>
+    <meta name="keywords" content="Dan_foodz, Developer, Lessons, Roblox Developer, Roblox, Dev, Free, Roblox Dev Free, Free Dev, Free Roblox Developer, Free Lessons, Free Support, Free, Dan_foodz#0751, Everything Dan_foodz">
+  </head>
+  <body style="background-color:#18181a; background-image: url('https://danfoodz.github.io/images/back.png');">
+  <div class="content">
+    <hr style="height:3px;border-width:0;color:white;background-color:white">
+    <h1>Get Archived!</h1>
+    <h5>By Dan_foodz | <a href="https://danfoodz.github.io/">Main Page</a></h5>
+    <hr style="height:1px;border-width:0;color:white;background-color:white">
+    <p>This is a tool made by <b>Dan_foodz</b> to archive any profile. This tool uses <b>Archive.org</b> to archive your profile!</p>
+    <br>
+    <!--<h3>Archive a Profile</h3>-->
+    <textarea placeholder="Roblox Username" id="robloxusername"></textarea>
+    <br>
+    <button onclick="ArchiveProfile()">Archive</button>
+    <script>
+        function ArchiveProfile() {
+            var Username = document.getElementById('robloxusername').innerHTML
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                var data = JSON.parse(xhttp.responseText);
+                window.open("https://web.archive.org/https://www.roblox.com/users/"+data['Id']+"/profile")
+            };
+            xhttp.open("GET", "https://api.roblox.com/users/get-by-username?username="+Username, true);
+            xhttp.send();
+        }
+    </script>
+  </div>
+  </body>
+</html>
