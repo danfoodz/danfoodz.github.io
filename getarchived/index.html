@@ -56,10 +56,15 @@
     <textarea placeholder="Roblox UserID" id="robloxuserid"></textarea>
     <br> 
     <button onclick="ArchiveProfile()">Archive</button>
+    <a id='lta' href="#"></a>
+    <br>
+    <p><b>HOW TO USE:</b><br><br>First: Put your <b>USER ID</b> in the text box, you can get your UserID by going to your profile, and copying the number in the URL bar.<br><br>Next: You will be sent to a URL, if it's taking to long to load (more then 30 seconds), then refresh the page, and your profiles archive should be there.<br><br>If you ever want to get to your profile archive, or anyone elses, just use this URL: <b>danfoodz.github.io/ap?i=USERIDHERE</b>, and replace <b>USERIDHERE</b> with your, or someone elses UserID.</p>
     <script>
         function ArchiveProfile() {
             var Userid = document.getElementById('robloxuserid').value
             window.open("https://web.archive.org/save/https://www.roblox.com/users/"+Userid+"/profile");
+            document.getElementById('lta').innerText = 'Press Here To Go To The Archive';
+            document.getElementById('lta').href = 'https://danfoodz.github.io/ap?i='+Userid;
             alert('Once Archived, you can go to it by going to danfoodz.github.io/ap?i='+Userid);
         }
     </script>
