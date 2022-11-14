@@ -66,6 +66,26 @@
   <div class="content">
     <hr style="height:3px;border-width:0;color:white;background-color:white">
     <h1>Dan_foodz <em>is</em> <span id="isa" style="color: rgb(47, 233, 236);">a Programmer</span></h1>
+    <script>
+      var Lopped = 1;
+      const titles = ['a Programmer', 'a Builder', 'a Graphics Designer', 'a Tester', 'a Helper', 'Anonymous', 'Happy :)'];
+      function TitleLoop() {
+        setTimeout(function() {
+        document.getElementById('isa').innerHTML = titles[Lopped]
+        Lopped++;
+        if (Lopped < 7) {
+          TitleLoop();
+        } else {
+          setTimeout(function() {
+            Lopped = 0
+            TitleLoop();
+          }, 10000)
+        }
+        }, 4500)
+      }
+      document.getElementById('isa').innerHTML = titles[0]
+      TitleLoop();
+    </script>
 	  <h4><a href="https://danfoodz.github.io/lessons">Lessons</a> | <a href="https://danfoodz.github.io/getarchived/">Get Archived!</a></h4>
     <hr style="height:1px;border-width:0;color:white;background-color:white">
     <h3>Who am I?</h3>
@@ -101,25 +121,5 @@
     <p><a href="https://danfoodz.github.io/archive">Dan_foodz Archive</a> | Hosted with love by <a href="https://danfoodz.github.io/redirection?to=https://github.io/&from=https://danfoodz.github.io&toname=GitHub.io&fromname=danfoodz.github.io">GitHub.io</a></p>
     <br>
   </div>
-  <script>
-    var Lopped = 1;
-    const titles = ['a Programmer', 'a Builder', 'a Graphics Designer', 'a Tester', 'a Helper', 'Anonymous', 'Happy :)'];
-    function TitleLoop() {
-      setTimeout(function() {
-      document.getElementById('isa').innerHTML = titles[Lopped]
-      Lopped++;
-      if (Lopped < 7) {
-        TitleLoop();
-      } else {
-        setTimeout(function() {
-          Lopped = 0
-          TitleLoop();
-        }, 10000)
-      }
-      }, 4500)
-    }
-    document.getElementById('isa').innerHTML = titles[0]
-    TitleLoop();
-  </script>
   </body>
 </html>
